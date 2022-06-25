@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Result";
+}
+@model RandomNumbersGenerator.Models.FormModel
+
+
+<div class="text-center">
+    <h1 class="display-4">Wylosuj wartości</h1>
+    <form asp-action="GenerateNumbers" asp-controller="Form">
+            <input type="number" asp-for="numberOfDices" placeholder="Ilość kostek" min="1"/>
+            <label>
+                Zakres kostek
+                <select asp-for="range">
+                    <option value="4">1-4</option>
+                    <option value="6">1-6</option>
+                    <option value="8">1-8</option>
+                    <option value="10">1-10</option>
+                    <option value="12">1-12</option>
+                    <option value="20">1-20</option>
+                </select>
+            </label>
+            <input type="submit" value="Wylosuj"/>
+    </form>
+</div>

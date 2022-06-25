@@ -1,0 +1,15 @@
+﻿@model RandomNumbersGenerator.Models.GeneratedNumbers
+
+@{
+    ViewData["Title"] = "Result";
+}
+
+<h1>Result</h1>
+
+<h3>Wylosowane wartości: </h3>
+<ul>
+    @foreach(int num in Model.numbers)
+    {
+        <li>@num</li>
+    }
+</ul>
